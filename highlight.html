@@ -1,1 +1,37 @@
-
+<html>
+	<head>
+		<style>
+		.division{
+			width:50%;
+			height:100px;
+			float:left;
+			}
+		</style>
+		<link rel="stylesheet"
+				href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+	</head>
+	<body>
+		<div class = "division">
+		Hiiiiiiiiiii<br>
+		This is Assignment 2<br>
+		Enter your name<input type = "text">
+		</div>
+		<div class = "division">
+			<script>
+				function showSource(){;
+				var source = "<html>";
+				source += document.getElementsByTagName('html')[0].innerHTML;
+				source += "</html>";
+				//now we need to escape the html special chars, javascript has escape
+				//but this does not do what we want
+				source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+				//now we add <pre> tags to preserve whitespace
+				source = "<pre>"+source+"</pre>";
+				document.write(source);
+				}  
+				showSource();
+			</script>
+		</div>
+	</body>
+</html>
